@@ -44,11 +44,11 @@ export function TaskProvider({ children }: { children: ReactNode }) {
     </TaskContext.Provider>
   );
 }
-
+//hook for the use of the context
 export function useTasks() {
   const context = useContext(TaskContext);
   if (!context) {
-    throw new Error("useTasks debe usarse dentro de TaskProvider");
+    throw new Error("useTasks should be use inside of TaskProvider");
   }
   return context;
 }
